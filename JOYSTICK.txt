@@ -1,0 +1,12 @@
+--- UP
+--- RT
+--- LT
+--- DN
+--- GND
+--- B1 RESET
+--- B2 START
+--- B3 VOLUME
+--- B
+--- A
+--- 
+--- Leds
