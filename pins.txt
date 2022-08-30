@@ -2,7 +2,7 @@
 --- RT
 --- LT
 --- DN
---- GND
+--- GND (confirmado)
 --- B1 RESET
 --- B2 START
 --- B3 VOLUME
@@ -16,7 +16,7 @@
      f   o   e
      f   n   d
      ---------
----  0   0   2
----  0   0   2
----  0   1   1
----  0   1   1
+---  0   0   2 PIN
+---  0   0   2 GND
+---  0   1   1 PIN
+---  0   1   1 GND
