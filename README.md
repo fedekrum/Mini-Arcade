@@ -33,8 +33,7 @@ Do it with the Raspberry Pi Imagger app
 
 - b) Enable ssh
 
-  Create empty file in /boot/ssh.txt
-  ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
+  Create an empty file in /boot/ssh.txt
 
 - c) reboot
 
@@ -55,6 +54,9 @@ sudo passwd
 
 \# edit raspi-config
 sudo raspi-config
+
+\# Copy yor ssh public key to have faster and secured access
+ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 
 exit 0
 ```
