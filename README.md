@@ -6,11 +6,11 @@ RPi Power Pack Hat Pro V1.1
 
 2.4-2.8inch RPi Display MPI2418
 
-#### 1) Install Retropie
+### 1) Install Retropie
 
-#### 2) Make these steps on the SD card
+### 2) Make these steps on the SD card
 
-### a) Connect to wifi
+#### a) Connect to wifi
 
 Create a file called wpa_supplicant.conf in the boot partition using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
@@ -28,7 +28,7 @@ network={
 # RETROPIE CONFIG END
 ```
 
-### b) Enable ssh
+#### b) Enable ssh
 
 ```
 Create empty file in /boot/ssh.txt
@@ -36,11 +36,11 @@ Create empty file in /boot/ssh.txt
 ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 ```
 
-### c) reboot
+#### c) reboot
 
-#### sudo passwd
+### sudo passwd
 
-#### bkp
+### bkp
 
 ```
 mkdir /home/pi/bkp
@@ -48,7 +48,7 @@ sudo cp -r /boot /home/pi/bkp/boot
 sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 ```
 
-#### 4) raspi-config
+### 4) raspi-config
 
 ```
 sudo raspi-config
@@ -58,7 +58,7 @@ sudo raspi-config
 P5 I2C Enable/disable automatic loading of I2C kernel module
 Yes
 
-#### 5) Update Retropie
+### 5) Update Retropie
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
@@ -82,23 +82,23 @@ Pair the BT controllers
 1 Install RetroPie Samba shares
 You will be able to get as GUEST
 
-#### Install aditional Software
+### Install aditional Software
 
 ```
 apt install i2c-tools
 ```
 
-#### Copy ROMS and BIOS
+### Copy ROMS and BIOS
 
 cd /home/pi/Mini-Arcade/share
 cp roms /home/pi/Retropie
 git clone https://github.com/fedekrum/Mini-Arcade.git
 
-#### install gpionext
+### install gpionext
 
-#### install bluetooth. ????
+### install bluetooth. ????
 
-#### instal driver for display
+### instal driver for display
 
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
