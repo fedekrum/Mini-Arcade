@@ -39,9 +39,10 @@ network={
   Probably you must do a
 
 ```
+cd
 ssh-keygen -R retropie.local
 ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
-ssh retropie.local -lpis
+ssh retropie.local -lpi
 ```
 
 ### 3) Connect to the RPi and execute this script
