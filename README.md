@@ -40,15 +40,13 @@ network={
 
 ```
 ssh-keygen -R retropie.local
+ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 ssh retropie.local -lpis
 ```
 
 ### 3) Connect to the RPi and execute this script
 
 ```
-# Copy you ssh public key to have faster and secured access
-ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
-
 # BKP
 mkdir /home/pi/bkp
 sudo cp -r /boot /home/pi/bkp/boot
