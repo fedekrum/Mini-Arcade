@@ -103,9 +103,11 @@ You will be able to get as GUEST
 
 ### Copy ROMS and BIOS
 
+```
 cd /home/pi/Mini-Arcade/share
 cp roms /home/pi/Retropie
 git clone https://github.com/fedekrum/Mini-Arcade.git
+```
 
 ### install gpionext
 
