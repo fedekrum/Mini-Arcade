@@ -52,10 +52,10 @@ sudo apt install -y mc git cmake i2c-tools
 \# Change pi password
 sudo passwd
 
-\# edit raspi-config
+\# Edit raspi-config and enable i2c
 sudo raspi-config
 
-\# Copy yor ssh public key to have faster and secured access
+\# Copy you ssh public key to have faster and secured access
 ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 
 exit 0
@@ -65,13 +65,11 @@ exit 0
 P5 I2C Enable/disable automatic loading of I2C kernel module
 Yes
 
-### 4) Run retropie_setup and enable i2c
+### 4) Run retropie_setup
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
-
-#### Update Retropie
 
 Choose "Update"
 Confirm all
