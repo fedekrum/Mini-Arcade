@@ -38,34 +38,43 @@ RPi Power Pack Hat Pro V1.1
 
 - c) reboot
 
-### sudo passwd
-
-### bkp
+### Connect to the RPi and execute this script
 
 ```
+\# BKP
 mkdir /home/pi/bkp
 sudo cp -r /boot /home/pi/bkp/boot
 sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
-```
 
-### 4) raspi-config
+\# Install aditional software
+sudo apt update
+sudo apt install -y mc git cmake i2c-tools
 
-```
+\# Change pi password
+sudo passwd
+
+\# edit raspi-config
 sudo raspi-config
+
+exit 0
 ```
 
 3 Interface Options Configure connections to peripherals
 P5 I2C Enable/disable automatic loading of I2C kernel module
 Yes
 
-### 5) Update Retropie
+### 5) Run retropie_setup
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
 
+#### Update Retropie
+
 Choose "Update"
 Confirm all
+
+-
 
 C Configuration / tools
 
@@ -85,7 +94,7 @@ You will be able to get as GUEST
 ### Install aditional Software
 
 ```
-apt install i2c-tools
+apt install i2c-tools -y
 ```
 
 ### Copy ROMS and BIOS
