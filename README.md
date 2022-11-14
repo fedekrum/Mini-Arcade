@@ -103,10 +103,14 @@ You will be able to get as GUEST
 
 ### Copy ROMS and BIOS
 
+While updating, you can open a second console an do the following
+Make sure to make repo public or it will not work.
+
 ```
-cd /home/pi/Mini-Arcade/share
-cp roms /home/pi/Retropie
+cd /home/pi/
 git clone https://github.com/fedekrum/Mini-Arcade.git
+cd /home/pi/Mini-Arcade/share
+cp -r roms /home/pi/RetroPie
 ```
 
 ### install gpionext
@@ -117,7 +121,6 @@ git clone https://github.com/fedekrum/Mini-Arcade.git
 
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
-sudo apt-get install cmake
 cd ~
 git clone https://github.com/juj/fbcp-ili9341.git
 cd fbcp-ili9341
