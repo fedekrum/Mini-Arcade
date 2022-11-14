@@ -40,22 +40,22 @@ network={
 ### 3) Connect to the RPi and execute this script
 
 ```
-\# BKP
+# BKP
 mkdir /home/pi/bkp
 sudo cp -r /boot /home/pi/bkp/boot
 sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
-\# Install aditional software
+# Install aditional software
 sudo apt update
 sudo apt install -y mc git cmake i2c-tools
 
-\# Change pi password
+# Change pi password
 sudo passwd
 
-\# Edit raspi-config and enable i2c
+# Edit raspi-config and enable i2c
 sudo raspi-config
 
-\# Copy you ssh public key to have faster and secured access
+# Copy you ssh public key to have faster and secured access
 ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 
 exit 0
