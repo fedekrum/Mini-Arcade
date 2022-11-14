@@ -26,6 +26,8 @@ network={
 # RETROPIE CONFIG END
 ```
 
+reboot
+
 #### 3) Enable ssh
 
 ```
