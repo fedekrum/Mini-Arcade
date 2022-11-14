@@ -101,12 +101,6 @@ C Configuration / tools - 199 bluetooth
 
 You will be able to get as GUEST
 
-### Install aditional Software
-
-```
-apt install i2c-tools -y
-```
-
 ### Copy ROMS and BIOS
 
 cd /home/pi/Mini-Arcade/share
