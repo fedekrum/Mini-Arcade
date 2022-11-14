@@ -32,6 +32,7 @@ Do it with the Raspberry Pi Imagger app
   ```
 
 - b) Enable ssh
+
   Create an empty file in /boot/ssh.txt
 
 - c) reboot
