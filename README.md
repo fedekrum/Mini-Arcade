@@ -65,7 +65,7 @@ exit 0
 P5 I2C Enable/disable automatic loading of I2C kernel module
 Yes
 
-### 5) Run retropie_setup
+### 4) Run retropie_setup and enable i2c
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
