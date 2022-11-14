@@ -15,25 +15,25 @@ RPi Power Pack Hat Pro V1.1
   Create a file called wpa_supplicant.conf in the boot partition using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
   ```
-      country=ES
-      ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-      update_config=1
+    country=ES
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
 
 
-      # RETROPIE CONFIG START
-      network={
-          ssid="your_real_2.4_wifi_ssid"
-          psk="your_real_password"
-      }
-      # RETROPIE CONFIG END
+    # RETROPIE CONFIG START
+    network={
+        ssid="your_real_2.4_wifi_ssid"
+        psk="your_real_password"
+    }
+    # RETROPIE CONFIG END
   ```
 
 - b) Enable ssh
 
   ```
-      Create empty file in /boot/ssh.txt
+    Create empty file in /boot/ssh.txt
 
-      ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
+    ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
   ```
 
 - c) reboot
