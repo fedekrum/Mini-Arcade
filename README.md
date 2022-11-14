@@ -32,6 +32,7 @@ Do it with the Raspberry Pi Imagger app
   ```
 
 - b) Enable ssh
+
   Create empty file in /boot/ssh.txt
   ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 
