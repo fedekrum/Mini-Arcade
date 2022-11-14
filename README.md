@@ -73,37 +73,27 @@ sudo raspi-config
 exit 0
 ```
 
-3 Interface Options Configure connections to peripherals
-
-P5 I2C Enable/disable automatic loading of I2C kernel module
-
-Yes
-
 ### 4) Run retropie_setup
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
 
-Choose "Update"
-Confirm all
+    - Choose "Update". Confirm all
 
--
+    - C Configuration / tools
+        - 199 bluetooth - Configure Bluetooth Devices
+            - Pair the BT controllers
 
-C Configuration / tools
+        - 206 emulationstation - EmulationStation - Frontend used by RetroPie
+            - 3 Swap A/B Buttons in ES (Currently: Default)
 
-199 bluetooth - Configure Bluetooth Devices
-Pair the BT controllers
+        - 207 esthemes - Install themes for Emulation Station
+            - 78 Update or Uninstall pacdude/minijawn
 
-206 emulationstation - EmulationStation - Frontend used by RetroPie
-3 Swap A/B Buttons in ES (Currently: Default)
-
-207 esthemes - Install themes for Emulation Station
-78 Update or Uninstall pacdude/minijawn
-
-226 samba - Configure Samba ROM Shares
-1 Install RetroPie Samba shares
-You will be able to get as GUEST
+        - 226 samba - Configure Samba ROM Shares
+            - 1 Install RetroPie Samba shares
+            You will be able to get as GUEST
 
 ### Install aditional Software
 
