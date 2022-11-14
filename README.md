@@ -37,7 +37,7 @@ Do it with the Raspberry Pi Imagger app
 
 - c) reboot
 
-### Connect to the RPi and execute this script
+### 3) Connect to the RPi and execute this script
 
 ```
 \# BKP
