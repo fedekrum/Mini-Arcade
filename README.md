@@ -8,7 +8,9 @@ RPi Power Pack Hat Pro V1.1
 
 #### 1) Install Retropie
 
-#### 2) Connect to wifi
+#### 2) Make these steps on the SD card
+
+### a) Connect to wifi
 
 Create a file called wpa_supplicant.conf in the boot partition using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
@@ -26,15 +28,15 @@ network={
 # RETROPIE CONFIG END
 ```
 
-reboot
-
-#### 3) Enable ssh
+### b) Enable ssh
 
 ```
 Create empty file in /boot/ssh.txt
 
 ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 ```
+
+### c) reboot
 
 #### sudo passwd
 
