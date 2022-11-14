@@ -11,7 +11,7 @@
 
 Do it with the Raspberry Pi Imager app
 
-### 2) Make these steps on the SD card
+### 2) Before moving SD to the RPi
 
 - a) Connect to wifi
 
@@ -35,7 +35,7 @@ network={
 
   Create an empty file in /boot/ssh.txt
 
-- c) reboot
+- c) Eject de SD and Boot your RPi with it.
 
 ### 3) Connect to the RPi and execute this script
 
