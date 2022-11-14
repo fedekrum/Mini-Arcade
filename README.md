@@ -9,6 +9,8 @@
 
 ### 1) Install Retropie
 
+Do it with the Raspberry Pi Imagger app
+
 ### 2) Make these steps on the SD card
 
 - a) Connect to wifi
