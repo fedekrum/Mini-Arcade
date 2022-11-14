@@ -122,3 +122,8 @@ sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexi
 
 
 https://github.com/Drewsif/PiShrink
+
+
+
+Battery icon on top right
+https://github.com/d-rez/gbz_overlay/blob/master/overlay.py
