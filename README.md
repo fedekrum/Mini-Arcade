@@ -1,10 +1,8 @@
 # Mini-Arcade
 
-RPi Zero W 2
-
-RPi Power Pack Hat Pro V1.1
-
-2.4-2.8inch RPi Display MPI2418
+- RPi Zero W 2
+- RPi Power Pack Hat Pro V1.1
+- 2.4-2.8inch RPi Display MPI2418
 
 ### 1) Install Retropie
 
