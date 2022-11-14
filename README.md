@@ -31,9 +31,11 @@ Create empty file in /boot/ssh.txt
 #### sudo passwd
 
 #### bkp
+```
 mkdir /home/pi/bkp
 sudo cp /boot /home/pi/bkp/boot
 sudo cp /etc/rc.local /home/pi/bkp/rc.local
+```
 
 #### 4) raspi-config
 ```
