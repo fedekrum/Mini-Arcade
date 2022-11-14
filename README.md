@@ -27,7 +27,16 @@ network={
 Create empty file in /boot/ssh.txt
 ```
 
-#### 4) Update Retropie
+#### 4) raspi-config
+```
+sudo raspi-config
+```
+3 Interface Options    Configure connections to peripherals
+P5 I2C         Enable/disable automatic loading of I2C kernel module
+Yes
+
+            
+#### 5) Update Retropie
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
@@ -53,7 +62,7 @@ You will be able to get as GUEST
 
 #### Install aditional Software
 ```
-sudo apt-get install
+apt install i2c-tools
 ```
 
 
@@ -62,8 +71,6 @@ sudo apt-get install
 
 
 #### install bluetooth. ????
-
-apt install i2c-tools
 
 
 
@@ -91,10 +98,12 @@ sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
 
 
 sudo nano /boot/config.txt
-sudo nano /etc/rc.local
 
-
-
+```
+# sudo nano /etc/rc.local
+# sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &
+sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
+```
 
 
 
