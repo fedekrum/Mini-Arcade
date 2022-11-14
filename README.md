@@ -6,8 +6,6 @@ RPi Power Pack Hat Pro V1.1
 
 #### 1) Install Retropie
 
-#### sudo passwd
-
 #### 2) Connect to wifi
 Create a file called wpa_supplicant.conf in the boot partition using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 ```
@@ -28,13 +26,19 @@ network={
 ```
 Create empty file in /boot/ssh.txt
 ```
+#### sudo passwd
+
+#### bkp
+mkdir /home/pi/bkp
+sudo cp /boot /home/pi/bkp/boot
+sudo cp /etc/rc.local /home/pi/bkp/rc.local
 
 #### 4) raspi-config
 ```
 sudo raspi-config
 ```
-3 Interface Options    Configure connections to peripherals
-P5 I2C         Enable/disable automatic loading of I2C kernel module
+3  Interface Options    Configure connections to peripherals
+P5 I2C                  Enable/disable automatic loading of I2C kernel module
 Yes
 
             
