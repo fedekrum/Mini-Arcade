@@ -63,7 +63,11 @@ sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 sudo apt update
 sudo apt install -y mc git cmake i2c-tools
 
-# Edit raspi-config and enable i2c
+# Run raspi-config
+# - Enable i2c
+# - Change ALL localizations
+# - Select keyboard
+
 sudo raspi-config
 
 exit 0
