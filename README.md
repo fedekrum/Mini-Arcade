@@ -45,6 +45,12 @@ ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 ssh retropie.local -lpi
 ```
 
+Change pi password
+
+```
+sudo passwd
+```
+
 ### 3) Connect to the RPi and execute this script
 
 ```
