@@ -6,6 +6,8 @@ RPi Power Pack Hat Pro V1.1
 
 #### 1) Install Retropie
 
+#### sudo passwd
+
 #### 2) Connect to wifi
 Create a file called wpa_supplicant.conf in the boot partition using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 ```
@@ -65,6 +67,10 @@ You will be able to get as GUEST
 apt install i2c-tools
 ```
 
+#### Copy ROMS and BIOS
+cd /home/pi/Mini-Arcade/share
+cp roms /home/pi/Retropie
+git clone https://github.com/fedekrum/Mini-Arcade.git
 
 #### install gpionext
 
