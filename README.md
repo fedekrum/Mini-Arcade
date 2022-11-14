@@ -1,8 +1,11 @@
 # Mini-Arcade
 
+### What do you need
+
 - RPi Zero W 2
 - RPi Power Pack Hat Pro V1.1
 - 2.4-2.8inch RPi Display MPI2418
+- BT game controller
 
 ### 1) Install Retropie
 
