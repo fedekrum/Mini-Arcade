@@ -36,6 +36,11 @@ network={
   Create an empty file in /boot/ssh.txt
 
 - c) Eject de SD and Boot your RPi with it.
+  Probably you must do a
+
+```
+ssh-keygen -R retropie.local
+```
 
 ### 3) Connect to the RPi and execute this script
 
