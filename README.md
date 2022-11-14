@@ -62,7 +62,9 @@ exit 0
 ```
 
 3 Interface Options Configure connections to peripherals
+
 P5 I2C Enable/disable automatic loading of I2C kernel module
+
 Yes
 
 ### 4) Run retropie_setup
