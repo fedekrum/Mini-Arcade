@@ -28,22 +28,31 @@ Create empty file in /boot/ssh.txt
 ```
 
 #### 4) Update Retropie
+```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
+```
+
 Choose "Update"
 Confirm all
 
------ install gpionext
+#### Install aditional Software
+```
+sudo apt-get install cmake
+```
+
+
+#### install gpionext
 
 
 
------ install bluetooth. ????
+#### install bluetooth. ????
 
 apt install mc cmake i2c-tools
 
 
 
 
------ instal driver for display
+#### instal driver for display
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
 sudo apt-get install cmake
