@@ -79,21 +79,19 @@ exit 0
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
 
-    - Choose "Update". Confirm all
+Choose "Update". Confirm all
 
-    - C Configuration / tools
-        - 199 bluetooth - Configure Bluetooth Devices
-            - Pair the BT controllers
+C Configuration / tools - 199 bluetooth - Configure Bluetooth Devices - Pair the BT controllers
 
-        - 206 emulationstation - EmulationStation - Frontend used by RetroPie
-            - 3 Swap A/B Buttons in ES (Currently: Default)
+    - 206 emulationstation - EmulationStation - Frontend used by RetroPie
+        - 3 Swap A/B Buttons in ES (Currently: Default)
 
-        - 207 esthemes - Install themes for Emulation Station
-            - 78 Update or Uninstall pacdude/minijawn
+    - 207 esthemes - Install themes for Emulation Station
+        - 78 Update or Uninstall pacdude/minijawn
 
-        - 226 samba - Configure Samba ROM Shares
-            - 1 Install RetroPie Samba shares
-            You will be able to get as GUEST
+    - 226 samba - Configure Samba ROM Shares
+        - 1 Install RetroPie Samba shares
+        You will be able to get as GUEST
 
 ### Install aditional Software
 
