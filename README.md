@@ -133,7 +133,7 @@ sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
 Start display driver at /etc/rc.local
 
 ```
-sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
+sudo sed -i 's/exit 0$/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
 ```
 
 Copy config.txt (needs to be improved as example above)
@@ -141,7 +141,7 @@ Copy config.txt (needs to be improved as example above)
 ```
 cd /home/pi/Mini-Arcade/
 sudo cp /boot/config.txt /home/pi/bkp/config.txt.previous
-sudo cat config.txt > /boot/config.txt
+sudo su -c 'sudo cat config.txt > /boot/config.txt'
 ```
 
 ### install gpionext
