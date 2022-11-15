@@ -140,6 +140,7 @@ Copy config.txt (needs to be improved as example above)
 
 ```
 cd /home/pi/Mini-Arcade/
+sudo cp /boot/config.txt /home/pi/bkp/config.txt.previous
 sudo cat config.txt > /boot/config.txt
 ```
 
