@@ -1,42 +1,44 @@
 # Mini-Arcade
 
-### What do you need
+This is for my private use on my "REAL Retro Arcade Machine" project.
+
+## What do I need
 
 - RPi Zero W 2
 - RPi Power Pack Hat Pro V1.1
 - 2.4-2.8inch RPi Display MPI2418
 - BT game controller
 
-### 1) Install Retropie
+## 1) Install Retropie
 
 Do it with the Raspberry Pi Imager app
 
-### 2) Before moving SD to the RPi
+## 2) Before moving SD to the RPi
 
-- a) Connect to wifi
+### a) Connect to wifi
 
-  Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
+Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
 ```
 country=ES
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 
-
 # RETROPIE CONFIG START
 network={
-    ssid="your_real_2.4_wifi_ssid"
-    psk="your_real_password"
+ssid="your_real_2.4_wifi_ssid"
+psk="your_real_password"
 }
 # RETROPIE CONFIG END
 ```
 
-- b) Enable ssh
+### b) Enable ssh
 
-  Create an empty file in /boot/ssh.txt
+Create an empty file in /boot/ssh.txt
 
-- c) Eject de SD and Boot your RPi with it.
-  Probably you must do a
+### c) Eject de SD and Boot your RPi with it.
+
+Probably you must do the following to connect on your Mac
 
 ```
 cd
@@ -51,7 +53,7 @@ Change pi's password
 sudo passwd pi
 ```
 
-### 3) Connect to the RPi and execute this script
+## 3) Connect to the RPi and execute the following lines
 
 ```
 # BKP
@@ -59,7 +61,7 @@ mkdir /home/pi/bkp
 sudo cp -r /boot /home/pi/bkp/boot
 sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
-# Install aditional software
+# Install additional software
 sudo apt update
 sudo apt install -y mc git cmake i2c-tools
 
@@ -67,38 +69,30 @@ sudo apt install -y mc git cmake i2c-tools
 # - Enable i2c
 # - Change ALL localizations
 # - Select keyboard
-
 sudo raspi-config
-
-exit 0
 ```
 
-### 4) Run retropie_setup
+## 4) Run retropie_setup
 
 ```
 sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 ```
 
-Choose "Update". Confirm all
+### Choose "Update". Confirm all
 
-C Configuration / tools
+### C Configuration / tools
 
 - 199 bluetooth - Configure Bluetooth Devices
-
   - Pair the BT controllers
-
 - 206 emulationstation - EmulationStation - Frontend used by RetroPie
-
   - 3 Swap A/B Buttons in ES (Currently: Default)
-
 - 207 esthemes - Install themes for Emulation Station
-
   - 78 Update or Uninstall pacdude/minijawn
 
-### Copy ROMS and BIOS
+## 5) Copy ROMS and BIOS
 
 While updating, you can open a second console an do the following
-Make sure to make repo public or it will not work.
+(Make sure to make repo public or it will not work.)
 
 ```
 cd /home/pi/
@@ -107,7 +101,7 @@ cd /home/pi/Mini-Arcade/share
 cp -r roms /home/pi/RetroPie
 ```
 
-### Install driver for display
+## 6) Install driver for display
 
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
@@ -116,15 +110,15 @@ cd ~
 git clone https://github.com/juj/fbcp-ili9341.git
 cd fbcp-ili9341
 mkdir build
-cd /home/pi/fbcp-ili9341/build
 
-rm -r /home/pi/fbcp-ili9341/build/\*
+cd /home/pi/fbcp-ili9341/build
+rm -r /home/pi/fbcp-ili9341/build/*
 cmake -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=22 -DGPIO_TFT_RESET_PIN=27 -DSPI_BUS_CLOCK_DIVISOR=6 ..
 make -j
 sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
 
 cd /home/pi/fbcp-ili9341/build
-rm -r /home/pi/fbcp-ili9341/build/\*
+rm -r /home/pi/fbcp-ili9341/build/*
 cmake -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=22 -DGPIO_TFT_RESET_PIN=27 -DSPI_BUS_CLOCK_DIVISOR=6 -DSTATISTICS=0 ..
 make -j
 sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
@@ -142,11 +136,12 @@ Copy config.txt (needs to be improved as example above)
 cd /home/pi/Mini-Arcade/
 sudo cp /boot/config.txt /home/pi/bkp/config.txt.previous
 sudo su -c 'sudo cat config.txt > /boot/config.txt'
+
 ```
 
-### install gpionext
+## 7) Install gpionext
 
-### install battery software
+## 8) Install battery software
 
 #### Check I2C on Rasbperry pi
 
@@ -170,26 +165,21 @@ i2cdump -y 1 0x62;
 ```
 
 VCELL(cell voltage) address：0x02 - 0x03
-
 PS: 0x62 is the device address of I2C device（CW2015 power monitoring chip）
 
-### How to read the voltage values that saved by chip register?
+#### How to read the voltage values that saved by chip register?
 
 ```
 sudo i2cget -y 1 0x62 0x02 w
 ```
 
 get the value 0xf82f; swap high and low byte to get 0x2ff8;
-
 0x2ff8 converted to decimal number is 12280;
-
 12280 \* 305 = 3745400 uV
-
 3745400/1000000 = 3.7454V
-
 PS: 305 is a fixed value (Fix factor value);
 
-### How to read the remaining capacity (percentage) estimated by the chip?
+#### How to read the remaining capacity (percentage) estimated by the chip?
 
 1. Read the integer part of the battery percentage;
 
@@ -198,7 +188,6 @@ sudo i2cget -y 1 0x62 0x4 b
 ```
 
 the resulting value is 0x11;
-
 Converted to 10 decimalism is 17, then the remaining capacity is 17%;
 
 2. Read the fractional part of the battery percentage
@@ -208,20 +197,14 @@ sudo i2cget -y 1 0x62 0x5 b
 ```
 
 the resulting value is 0x95;
-
 Converted to decimalism is 149;
-
 Then the fractional part is 149/256 = 0.58;
-
 So the chip estimated remaining capacity (percentage) is 17.58%.
 
-### install bluetooth audio ????
+## 9) Install bluetooth audio ????
+
+## other) References
 
 https://github.com/Drewsif/PiShrink
-
 Battery icon on top right
 https://github.com/d-rez/gbz_overlay/blob/master/overlay.py
-
-```
-
-```
