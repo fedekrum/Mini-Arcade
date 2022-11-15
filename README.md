@@ -134,7 +134,6 @@ Start display driver at /etc/rc.local
 
 ```
 sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
-
 ```
 
 Copy config.txt (needs to be improved as example above)
