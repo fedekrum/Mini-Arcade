@@ -63,7 +63,7 @@ sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
 # Install additional software
 sudo apt update
-sudo apt install -y mc git cmake i2c-tools
+sudo apt install -y mc git cmake i2c-tools bc
 
 # Run raspi-config
 # - Enable i2c
