@@ -130,7 +130,7 @@ make -j
 sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
 ```
 
-Driver start at /etc/rc.local
+Start display driver at /etc/rc.local
 
 ```
 sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
@@ -146,7 +146,7 @@ sudo cat config.txt > /boot/config.txt
 
 ### install gpionext
 
-### install bluetooth. ????
+### install bluetooth audio ????
 
 https://github.com/Drewsif/PiShrink
 
