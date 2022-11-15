@@ -205,6 +205,7 @@ So the chip estimated remaining capacity (percentage) is 17.58%.
 
 ## other) References
 
+https://stackedit.io/app#
 https://github.com/Drewsif/PiShrink
 Battery icon on top right
 https://github.com/d-rez/gbz_overlay/blob/master/overlay.py
