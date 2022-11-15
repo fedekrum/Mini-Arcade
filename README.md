@@ -95,12 +95,6 @@ C Configuration / tools
 
   - 78 Update or Uninstall pacdude/minijawn
 
-- 226 samba - Configure Samba ROM Shares
-
-  - 1 Install RetroPie Samba shares
-
-You will be able to get as GUEST
-
 ### Copy ROMS and BIOS
 
 While updating, you can open a second console an do the following
@@ -112,10 +106,6 @@ git clone https://github.com/fedekrum/Mini-Arcade.git
 cd /home/pi/Mini-Arcade/share
 cp -r roms /home/pi/RetroPie
 ```
-
-### install gpionext
-
-### install bluetooth. ????
 
 ### instal driver for display
 
@@ -145,6 +135,10 @@ sudo nano /boot/config.txt
 # sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &
 sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
 ```
+
+### install gpionext
+
+### install bluetooth. ????
 
 https://github.com/Drewsif/PiShrink
 
