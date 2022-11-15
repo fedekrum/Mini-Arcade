@@ -128,16 +128,20 @@ rm -r /home/pi/fbcp-ili9341/build/\*
 cmake -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=22 -DGPIO_TFT_RESET_PIN=27 -DSPI_BUS_CLOCK_DIVISOR=6 -DSTATISTICS=0 ..
 make -j
 sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
-
-sudo nano /boot/config.txt
 ```
 
-# sudo nano /etc/rc.local
+Driver start at /etc/rc.local
 
-# sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &
-
+```
 sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
 
+```
+
+Copy config.txt (needs to be improved as example above)
+
+```
+cd /home/pi/Mini-Arcade/
+sudo cat config.txt > /boot/config.txt
 ```
 
 ### install gpionext
@@ -148,4 +152,7 @@ https://github.com/Drewsif/PiShrink
 
 Battery icon on top right
 https://github.com/d-rez/gbz_overlay/blob/master/overlay.py
+
+```
+
 ```
