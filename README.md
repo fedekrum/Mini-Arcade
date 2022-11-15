@@ -15,7 +15,7 @@ Do it with the Raspberry Pi Imager app
 
 ## 2) Before moving SD to the RPi
 
-### a) Connect to wifi
+### a) Configure WiFi on the RPi
 
 Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
@@ -38,7 +38,7 @@ Create an empty file in /boot/ssh.txt
 
 ### c) Eject de SD and Boot your RPi with it.
 
-Probably you must do the following to connect on your Mac
+Probably you must do the following on your Mac to connect .
 
 ```
 cd
