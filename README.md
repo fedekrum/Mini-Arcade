@@ -81,9 +81,9 @@ sudo /home/pi/RetroPie-Setup/retropie_setup.sh
 
 Choose "Update". Confirm all
 
-C Configuration / tools - 199 bluetooth
+C Configuration / tools
 
-- Configure Bluetooth Devices
+- 199 bluetooth - Configure Bluetooth Devices
 
   - Pair the BT controllers
 
