@@ -107,10 +107,11 @@ cd /home/pi/Mini-Arcade/share
 cp -r roms /home/pi/RetroPie
 ```
 
-### instal driver for display
+### Install driver for display
 
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
+```
 cd ~
 git clone https://github.com/juj/fbcp-ili9341.git
 cd fbcp-ili9341
@@ -129,11 +130,14 @@ make -j
 sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
 
 sudo nano /boot/config.txt
-
 ```
+
 # sudo nano /etc/rc.local
+
 # sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &
+
 sudo sed -i 's/exit 0/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
+
 ```
 
 ### install gpionext
@@ -144,3 +148,4 @@ https://github.com/Drewsif/PiShrink
 
 Battery icon on top right
 https://github.com/d-rez/gbz_overlay/blob/master/overlay.py
+```
