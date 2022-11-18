@@ -142,6 +142,18 @@ sudo su -c 'sudo cat config.txt > /boot/config.txt'
 
 ## 7) Install gpionext
 
+https://github.com/mholgatem/GPIOnext
+
+DO NOT execute the setup
+Make sure GPIO pins for Joystick are connected
+
+```
+cd ~
+git clone https://github.com/mholgatem/GPIOnext.git
+bash GPIOnext/install.sh
+gpionext set pins 7,12,16,18,35,36,37,38,40
+```
+
 ## 8) Install battery software
 
 #### Check I2C on Rasbperry pi
