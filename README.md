@@ -63,7 +63,7 @@ sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
 # Install additional software
 sudo apt update
-sudo apt install -y mc git cmake i2c-tools bc logrotate
+sudo apt install -y mc git cmake i2c-tools bc logrotate php-cli
 
 # Run raspi-config
 # - Enable i2c
@@ -144,7 +144,7 @@ sudo su -c 'sudo cat config.txt > /boot/config.txt'
 
 https://github.com/mholgatem/GPIOnext
 
-DO NOT execute the setup
+DO NOT execute the setup after install
 Make sure GPIO pins for Joystick are connected
 
 ```
