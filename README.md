@@ -36,7 +36,7 @@ psk="your_real_password"
 
 Create an empty file in /boot/ssh.txt
 
-### c) Eject de SD and Boot your RPi with it.
+### c) Eject the SD and Boot your RPi with it.
 
 Probably you must do the following on your Mac to connect .
 
@@ -152,6 +152,7 @@ cd ~
 git clone https://github.com/mholgatem/GPIOnext.git
 bash GPIOnext/install.sh
 gpionext set pins 7,12,16,18,35,36,37,38,40
+
 ```
 
 ## 8) Install battery software
