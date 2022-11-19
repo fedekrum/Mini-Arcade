@@ -22,7 +22,7 @@ Create a file called /boot/wpa_supplicant.conf using the following template. (Th
 ```
 cd /Volumes/boot
 
-cat <<EOT >> /Volumes/boot/wpa_supplicant.conf
+cat <<EOT > /Volumes/boot/wpa_supplicant.conf
 country=ES
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
