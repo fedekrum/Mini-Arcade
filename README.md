@@ -142,7 +142,8 @@ Make sure GPIO pins for Joystick are connected
 cd ~
 git clone https://github.com/mholgatem/GPIOnext.git
 bash GPIOnext/install.sh
-gpionext set pins 7,12,16,18,35,36,37,38,40
+gpionext set pins 12,16,18,22,36,37,38,40
+
 gpionext config
 
 ```
