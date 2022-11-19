@@ -13,7 +13,9 @@ This is for my private use on my "REAL Retro Arcade Machine" project.
 
 Do it with the Raspberry Pi Imager app
 
-## 2) Prepare your SD
+## 2) Prepare your SD to boot
+
+### a. Execute this script to prepare your SD
 
 ```
 cd
@@ -21,10 +23,9 @@ rm ./prepare_boot.sh
 wget https://raw.githubusercontent.com/fedekrum/Mini-Arcade/main/prepare_boot.sh | bash
 bash ./prepare_boot.sh
 rm ./prepare_boot.sh
-
 ```
 
-### c) Eject the SD and Boot your RPi with it.
+### b. Eject the SD and Boot your RPi with it.
 
 Wait till file system expansion
 
@@ -37,7 +38,7 @@ ssh-copy-id -i .ssh/id_rsa.pub pi@retropie.local
 ssh retropie.local -lpi
 ```
 
-Change pi's password
+Ones in Retropie, change pi's password
 
 ```
 sudo passwd pi
