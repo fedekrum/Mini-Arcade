@@ -55,6 +55,16 @@ dtparam=i2c_arm=on
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
+#dtoverlay=pwm-2chan,pin=18,func=2,pin2=13,func2=4
+audio_pwm_mode=2
+
+# MONO
+gpio=19=a5
+dtoverlay=audremap,pins_19
+
+# STEREO
+#gpio=13,19=a5
+#dtoverlay=audremap,pins_13_19
 
 [pi4]
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
@@ -67,3 +77,6 @@ gpu_mem_256=128
 gpu_mem_512=256
 gpu_mem_1024=256
 #overscan_scale=1
+
+dtoverlay=act-led,gpio=4
+
