@@ -20,22 +20,7 @@ Do it with the Raspberry Pi Imager app
 Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
 ```
-cd /Volumes/boot
-
-cat <<EOT > /Volumes/boot/wpa_supplicant.conf
-country=ES
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-# RETROPIE CONFIG START
-network={
-ssid="your_real_2.4_wifi_ssid"
-psk="your_real_password"
-}
-# RETROPIE CONFIG END
-EOT
-
-touch /Volumes/boot/ssh.txt
+wget wget https://raw.githubusercontent.com/fedekrum/Mini-Arcade/main/prepare_boot.sh | bash
 
 ```
 
