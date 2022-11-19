@@ -13,13 +13,10 @@ This is for my private use on my "REAL Retro Arcade Machine" project.
 
 Do it with the Raspberry Pi Imager app
 
-## 2) Before moving SD to the RPi
-
-### a) Configure WiFi on the RPi
-
-Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
+## 2) Prepare your SD
 
 ```
+cd
 rm ./prepare_boot.sh
 wget https://raw.githubusercontent.com/fedekrum/Mini-Arcade/main/prepare_boot.sh | bash
 bash ./prepare_boot.sh
@@ -27,11 +24,9 @@ rm ./prepare_boot.sh
 
 ```
 
-### b) Enable ssh
-
-Create an empty file in /boot/ssh.txt
-
 ### c) Eject the SD and Boot your RPi with it.
+
+Wait till file system expansion
 
 Probably you must do the following on your Mac to connect .
 
