@@ -20,7 +20,9 @@ Do it with the Raspberry Pi Imager app
 Create a file called /boot/wpa_supplicant.conf using the following template. (This will be moved at boot to the /etc/wpa_supplicant directory).
 
 ```
-wget wget https://raw.githubusercontent.com/fedekrum/Mini-Arcade/main/prepare_boot.sh | bash
+wget https://raw.githubusercontent.com/fedekrum/Mini-Arcade/main/prepare_boot.sh | bash
+bash ./prepare_boot.sh
+rm ./prepare_boot.sh
 
 ```
 
