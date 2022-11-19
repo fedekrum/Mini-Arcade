@@ -54,7 +54,7 @@ sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
 # Install additional software
 sudo apt update
-sudo apt install -y mc git cmake i2c-tools bc logrotate php-cli
+sudo apt install -y mc git cmake i2c-tools bc php-cli
 
 # Run raspi-config
 # - Enable i2c
