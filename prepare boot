@@ -1,0 +1,18 @@
+In my Mac
+cd /Volumes/boot
+touch /Volumes/boot/ssh.txt
+
+cat <<EOT > /Volumes/boot/wpa_supplicant.conf
+country=ES
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+# RETROPIE CONFIG START
+network={
+ssid="your_real_2.4_wifi_ssid"
+psk="your_real_password"
+}
+# RETROPIE CONFIG END
+EOT
+
+nano /Volumes/boot/wpa_supplicant.conf
