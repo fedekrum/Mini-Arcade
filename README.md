@@ -89,7 +89,7 @@ While updating, you can open a second console an do the following
 ```
 cd /home/pi/
 git clone https://github.com/fedekrum/Mini-Arcade.git
-cd /home/pi/Mini-Arcade/share
+cd /home/pi/Mini-Arcade/files
 cp -r roms /home/pi/RetroPie
 ```
 
@@ -142,9 +142,9 @@ Make sure GPIO pins for Joystick are connected
 cd ~
 git clone https://github.com/mholgatem/GPIOnext.git
 bash GPIOnext/install.sh
-gpionext set pins 12,16,18,22,36,37,38,40
 
-gpionext config
+gpionext set pins 12,16,18,22,36,37,38,40
+sudo python3 /home/pi/GPIOnext/config_manager.py --pins 12,16,18,22,36,37,38,40
 
 ```
 
