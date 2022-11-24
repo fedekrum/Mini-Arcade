@@ -52,9 +52,20 @@ mkdir /home/pi/bkp
 sudo cp -r /boot /home/pi/bkp/boot
 sudo cp -r /etc/rc.local /home/pi/bkp/rc.local
 
+mkdir /home/pi/bin
+
 # Install additional software
 sudo apt update
-sudo apt install -y mc git cmake i2c-tools bc php-cli
+sudo apt install -y mc git cmake i2c-tools bc php-cli sox libsox-fmt-all
+
+# Download Git repos
+cd /home/pi/
+mkdir repos
+cd repos
+git clone https://github.com/fedekrum/Mini-Arcade.git
+git clone https://github.com/juj/fbcp-ili9341.git
+git clone https://github.com/mholgatem/GPIOnext.git
+git clone https://github.com/archtaurus/RetroPieBIOS.git
 
 # Run raspi-config
 # - Enable i2c
@@ -89,7 +100,7 @@ While updating, you can open a second console an do the following
 ```
 cd /home/pi/
 git clone https://github.com/fedekrum/Mini-Arcade.git
-cd /home/pi/Mini-Arcade/files
+cd /home/pi/repos/Mini-Arcade/files
 cp -r roms /home/pi/RetroPie
 ```
 
@@ -98,34 +109,32 @@ cp -r roms /home/pi/RetroPie
 https://bytesnbits.co.uk/retropie-raspberry-pi-0-spi-lcd/
 
 ```
-cd ~
-git clone https://github.com/juj/fbcp-ili9341.git
-cd fbcp-ili9341
+cd /home/pi/repos/fbcp-ili9341
 mkdir build
 
-cd /home/pi/fbcp-ili9341/build
-rm -r /home/pi/fbcp-ili9341/build/*
+cd /home/pi/repos/fbcp-ili9341/build
+rm -r /home/pi/repos/fbcp-ili9341/build/*
 cmake -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=22 -DGPIO_TFT_RESET_PIN=27 -DSPI_BUS_CLOCK_DIVISOR=6 ..
 make -j
-sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
+sudo /home/pi/repos/fbcp-ili9341/build/fbcp-ili9341
 
-cd /home/pi/fbcp-ili9341/build
-rm -r /home/pi/fbcp-ili9341/build/*
+cd /home/pi/repos/fbcp-ili9341/build
+rm -r /home/pi/repos/fbcp-ili9341/build/*
 cmake -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=22 -DGPIO_TFT_RESET_PIN=27 -DSPI_BUS_CLOCK_DIVISOR=6 -DSTATISTICS=0 ..
 make -j
-sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341
+sudo /home/pi/repos/fbcp-ili9341/build/fbcp-ili9341
 ```
 
 Start display driver at /etc/rc.local
 
 ```
-sudo sed -i 's/exit 0$/sudo \/home\/pi\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
+sudo sed -i 's/exit 0$/sudo \/home\/pi\/repos\/fbcp-ili9341\/build\/fbcp-ili9341 \&\nexit 0/' /etc/rc.local
 ```
 
 Copy config.txt (needs to be improved as example above)
 
 ```
-cd /home/pi/Mini-Arcade/
+cd /home/pi/repos/Mini-Arcade/
 sudo cp /boot/config.txt /home/pi/bkp/config.txt.previous
 sudo su -c 'sudo cat config.txt > /boot/config.txt'
 
@@ -139,12 +148,11 @@ DO NOT execute the setup after install
 Make sure GPIO pins for Joystick are connected
 
 ```
-cd ~
-git clone https://github.com/mholgatem/GPIOnext.git
+cd /home/pi/repos
 bash GPIOnext/install.sh
 
 gpionext set pins 12,16,18,22,36,37,38,40
-sudo python3 /home/pi/GPIOnext/config_manager.py --pins 12,16,18,22,36,37,38,40
+sudo python3 /home/pi/repos/GPIOnext/config_manager.py --pins 12,16,18,22,36,37,38,40
 
 ```
 
