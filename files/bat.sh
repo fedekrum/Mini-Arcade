@@ -5,10 +5,17 @@
 # You can 'tail -f /home/pi/bat.csv' to see the log
 
 # Configuration --------------------
-shutdown_percentage="1"
+shutdown_percentage="4"
 wait=60     # time between loop cycles
+
+alarm1=20
+alarm2=10
+alarm3=5
+
 log=false
+
 sleep 60    # to wait internet clock sync ???
+
 # ----------------------------------
 
 charge_percentage () {
